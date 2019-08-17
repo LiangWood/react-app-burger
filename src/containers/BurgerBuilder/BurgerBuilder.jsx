@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
-import Aux from '../../hoc/Aux';
+import Aux from 'react-aux';
+// import Aux from '../../hoc/Aux';
 import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/Burger/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
@@ -12,6 +12,7 @@ const INGRENDIENT_PRICES = {
   meat: 1.3,
   bacon: 0.7
 }
+
 
 class BurgerBuilder extends Component {
     // constructor(props) {
