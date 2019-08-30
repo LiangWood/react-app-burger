@@ -1,5 +1,5 @@
-import React from 'react';
-import Aux from 'react-aux';
+import React, {Fragment} from 'react';
+// import Aux from 'react-aux';
 import Logo from '../../Logo/Logo';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import Backdrop from '../../UI/Backdrop/Backdrop'
@@ -15,7 +15,7 @@ const sideDrawer = (props) => {
     }
 
     return (
-        <Aux>
+        <Fragment>
             <Backdrop show={props.open} clicked={props.closed} />
             <div className={attachedClasses.join(' ')}>
                 <div className={classes.Logo}>
@@ -23,7 +23,7 @@ const sideDrawer = (props) => {
                 </div>
                 <NavigationItems />
             </div>
-        </Aux>
+        </Fragment>
     );
 }
 

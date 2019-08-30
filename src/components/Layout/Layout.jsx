@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import Aux from 'react-aux';
+import React, {Component , Fragment} from 'react';
+// import Aux from 'react-aux';
 // import Aux from '../../hoc/Aux';
 import Toolbar from '../Navigation/Toolbar/Toolbar';
 import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
@@ -22,7 +22,7 @@ class Layout extends Component {
 
     render () {
        return (
-        <Aux>
+        <Fragment>
             <Toolbar drawerToogleClicked={this.sideDrawerToggleHandler} />
             <SideDrawer 
             open={this.state.showSideDrawer}
@@ -30,7 +30,7 @@ class Layout extends Component {
             <main className={classes.Content}>
                 {this.props.children}
             </main>
-        </Aux>
+        </Fragment>
        ); 
     }
 }

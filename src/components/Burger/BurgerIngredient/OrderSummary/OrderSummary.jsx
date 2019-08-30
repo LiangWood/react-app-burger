@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import Aux from 'react-aux';
+import React, {Component,Fragment} from 'react';
+// import Aux from 'react-aux';
 
 // import Aux from '../../../../hoc/Aux';
-import Button from '../../../Button/Button';
+import Button from '../../../UI/Button/Button';
 class OrderSummary extends Component {
 
     componentWillUpdate() {
@@ -21,7 +21,7 @@ class OrderSummary extends Component {
         })
 
         return (
-            <Aux>
+            <Fragment>
                 <h3>Your Order</h3>
                 <p>A delicious burger with the following ingredients:</p>
                 <ul>
@@ -31,7 +31,7 @@ class OrderSummary extends Component {
                 <p>Continue to Checkout?</p>
                 <Button btnType="Danger" clicked={this.props.buttonCanceled}>CANCEL</Button>
                 <Button btnType="Success" clicked={this.props.buttonContinued}>CONTINUE</Button>
-            </Aux>
+            </Fragment>
         );
     }
 }
